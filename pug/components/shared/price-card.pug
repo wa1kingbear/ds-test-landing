@@ -1,0 +1,26 @@
+mixin price-card(tag, title, price, text, items, theme)
+    article.price-card(class=theme)
+        .price-card__tag
+            span= tag
+            if theme === 'dark'
+                img(src="assets/icons/star-black.svg", alt="star")
+            else 
+                img(src="assets/icons/star-white.svg", alt="star")
+        .price-card__title 
+            span= title
+                <br />
+                | за 
+                i= price
+                    | #{' '}₽
+        .price-card__text 
+            p= text 
+        if items
+            ul.price-card__list
+                each item in items
+                    li
+                        if item.isStrong
+                            strong= item.text
+                        else
+                            = item.text
+        .price-card__button
+            +button('Купить')

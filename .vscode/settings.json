@@ -1,0 +1,9 @@
+{
+    "path-intellisense.mappings": {
+        "/html": "${workspaceFolder}/html"
+    },
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "files.associations": {
+        "*.html": "html"
+    }
+}

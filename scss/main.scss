@@ -1,0 +1,42 @@
+@use "./base/reset";
+@use "./base/colors";
+@use "./base/typography";
+
+@use "./variables";
+
+@use "./components/shared/button";
+
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/container";
+
+@use "@mixins" as *;
+
+html,
+body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    scrollbar-gutter: stable;
+}
+body {
+    display: flex;
+    min-width: 320px;
+    width: 100%;
+    background-color: #fff;
+    font-weight: 400;
+    font-family: var(--font-inter);
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--dark-grey);
+    flex: 1;
+    text-rendering: optimizeLegibility;
+    &.lock {
+        overflow: hidden;
+    }
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}

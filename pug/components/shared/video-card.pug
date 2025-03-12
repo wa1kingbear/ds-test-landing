@@ -1,0 +1,9 @@
+mixin video-card(title, video, preview)
+    .video-card(data-src= video)
+        .video-card__preview
+            img(src= preview, alt= title)
+            .video-card__icon
+                img(src="assets/icons/play.svg", alt="")
+        if title && title.trim() !== ''
+            .video-card__title
+                span= title

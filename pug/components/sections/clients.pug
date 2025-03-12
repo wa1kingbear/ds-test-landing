@@ -1,0 +1,15 @@
+include ../../mixins/mixins.pug
+
+section.clients
+    .container
+        .clients__title.h2
+            h2 Клиенты, которые уже покупают
+                <br />
+                span.orange Лидов для своего бизнеса
+        .clients__description.description 
+            p Более 5000 компаний по всей России уже используют покупку Лидов!
+        .clients__cards 
+            +client-card('assets/images/clients/skoda.png', 'Skoda')
+            +client-card('assets/images/clients/skillbox.png', 'Skillbox')
+            +client-card('assets/images/clients/worldclass.png', 'WorldClass')
+            +client-card('assets/images/clients/absolut-bank.png', 'Абсолют Банк')
