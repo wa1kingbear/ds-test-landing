@@ -1,2 +1,125 @@
 .header {
+    background-color: var(--dark-grey);
+    padding: 6px 0;
+    border-radius: 0 0 50px 50px;
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.header__logo {
+    display: block;
+    width: 251px;
+    transition: opacity 0.2s ease;
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    a {
+        color: var(--white);
+        transition: color 0.2s ease;
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+        @media (hover: hover) {
+            &:hover {
+                color: var(--grey-2);
+            }
+        }
+    }
+}
+.header__contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header__contacts__socials {
+    display: flex;
+    flex-direction: row;
+    margin-right: 12px;
+    a {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: background-color 0.2s ease;
+        position: relative;
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+        &.whatsapp {
+            background-color: var(--whatsapp-btn);
+            &:before {
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+                content: "";
+                opacity: 0.3;
+                transition: opacity 0.2s ease;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+            }
+            @media (hover: hover) {
+                &:hover {
+                    background-color: var(--whatsapp-btn-hover);
+                }
+            }
+            &:active {
+                background-color: var(--whatsapp-btn-active);
+                &:before {
+                    opacity: 0;
+                }
+            }
+        }
+        &.telegram {
+            background-color: var(--telegram-btn);
+            @media (hover: hover) {
+                &:hover {
+                    background-color: var(--telegram-btn-hover);
+                }
+            }
+            &:active {
+                background-color: var(--telegram-btn-active);
+            }
+        }
+        svg {
+            display: block;
+            height: auto;
+            width: 28px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+.header__contacts__phone {
+    a {
+        color: var(--white);
+        transition: color 0.2s ease;
+        @media (hover: hover) {
+            &:hover {
+                color: var(--grey-2);
+            }
+        }
+    }
 }
