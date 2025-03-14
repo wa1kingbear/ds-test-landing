@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import path from "path";
 import pugPlugin from "vite-plugin-pug";
-import { imagetools } from "vite-imagetools"; // Импортируем плагин для оптимизации изображений
+import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
     root: ".",
