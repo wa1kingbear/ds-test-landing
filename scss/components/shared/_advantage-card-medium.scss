@@ -1,15 +1,40 @@
+@use "@mixins" as *;
+
 .advantage-card-medium {
     background-color: var(--light-grey);
     padding: 40px;
     border-radius: 40px;
     box-sizing: border-box;
     position: relative;
+    @include media-max-width(1850) {
+        padding: 30px;
+        border-radius: 30px;
+    }
+    @include media-max-width(1400) {
+        border-radius: 20px;
+    }
+    @include media-max-width(1280) {
+        padding: 20px;
+        border-radius: 15px;
+    }
 }
 .advantage-card-medium__title {
     font-family: var(--font-montserrat);
     font-weight: 600;
     font-size: 80px;
     line-height: 80px;
+    @include media-max-width(1850) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    @include media-max-width(1400) {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    @include media-max-width(1280) {
+        font-size: 30px;
+        line-height: 30px;
+    }
 }
 .advantage-card-medium__star {
     width: 60px;
@@ -17,6 +42,19 @@
     position: absolute;
     top: 40px;
     right: 40px;
+    @include media-max-width(1850) {
+        width: 45px;
+        top: 30px;
+        right: 40px;
+    }
+    @include media-max-width(1400) {
+        width: 35px;
+    }
+    @include media-max-width(1280) {
+        width: 25px;
+        top: 20px;
+        right: 20px;
+    }
     img {
         display: block;
         height: auto;

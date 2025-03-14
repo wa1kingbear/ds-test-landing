@@ -32,6 +32,7 @@ export const videoModal = (): void => {
                 const iframe: HTMLIFrameElement | null =
                     modalFrame.querySelector("iframe");
                 iframe?.remove();
+                body?.classList.remove("lock");
             }, 350);
         };
 

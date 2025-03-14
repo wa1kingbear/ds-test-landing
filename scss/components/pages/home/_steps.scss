@@ -1,5 +1,16 @@
+@use "@mixins" as *;
+
 .steps {
     margin-top: 120px;
+    @include media-max-width(1400) {
+        margin-top: 100px;
+    }
+    @include media-max-width(1280) {
+        margin-top: 80px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 60px;
+    }
     .container {
         overflow: hidden;
     }
@@ -22,6 +33,12 @@
     position: absolute;
     bottom: 80px !important;
     z-index: 5;
+    @include media-max-width(1850) {
+        bottom: 30px !important;
+    }
+    @include media-max-width(1280) {
+        bottom: 23px !important;
+    }
 }
 .steps-slider__pagination__bullet {
     display: block;
@@ -31,6 +48,18 @@
     cursor: pointer;
     border-radius: 50%;
     transition: background-color 0.2s ease;
+    @include media-max-width(1850) {
+        height: 18px;
+        width: 18px;
+    }
+    @include media-max-width(1280) {
+        height: 15px;
+        width: 15px;
+    }
+    @include media-max-width(1000) {
+        height: 12px;
+        width: 12px;
+    }
     @media (hover: hover) {
         &:hover {
             &:not(.steps-slider__pagination__bullet__active) {
@@ -43,5 +72,11 @@
     }
     &:not(:last-child) {
         margin-right: 16px;
+        @include media-max-width(1850) {
+            margin-right: 10px;
+        }
+        @include media-max-width(1280) {
+            margin-right: 7px;
+        }
     }
 }

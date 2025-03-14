@@ -1,26 +1,76 @@
+@use "@mixins" as *;
+
 .info {
     margin-top: 120px;
+    @include media-max-width(1400) {
+        margin-top: 100px;
+    }
+    @include media-max-width(1280) {
+        margin-top: 80px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 60px;
+    }
     .container {
         display: flex;
         flex-direction: row;
         gap: 60px;
         padding: 0 148px;
+        @include media-max-width(1850) {
+            padding: 0 100px;
+            gap: 80px;
+        }
+        @include media-max-width(1280) {
+            padding: 0;
+            gap: 50px;
+        }
+        @include media-max-width(1000) {
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 }
 .info__title {
     flex: 1;
+    @include media-max-width(1000) {
+        text-align: center;
+    }
 }
 .info__title__text {
     width: 561px;
+    @include media-max-width(1850) {
+        width: 400px;
+    }
+    @include media-max-width(1280) {
+        width: 100%;
+    }
     img {
         display: block;
         height: auto;
         width: 72px;
         margin-top: 30px;
+        @include media-max-width(1850) {
+            width: 55px;
+            margin-top: 20px;
+        }
+        @include media-max-width(1400) {
+            width: 50px;
+        }
+        @include media-max-width(1280) {
+            width: 40px;
+            margin-top: 15px;
+        }
+        @include media-max-width(1000) {
+            width: 50px;
+            margin: 15px auto 0 auto;
+        }
     }
 }
 .info__title__button {
     margin-top: 60px;
+    @include media-max-width(1850) {
+        margin-top: 50px;
+    }
     button,
     a {
         width: 100%;
@@ -29,6 +79,10 @@
 .info__description {
     width: 731px;
     position: relative;
+    @include media-max-width(1850) {
+        width: auto;
+        flex: 1;
+    }
     &.open {
         .info__description__content {
             -webkit-line-clamp: unset;
@@ -37,6 +91,12 @@
     p {
         &:not(:nth-child(1)) {
             margin-top: 20px;
+            @include media-max-width(1850) {
+                margin-top: 15px;
+            }
+            @include media-max-width(1000) {
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -54,6 +114,12 @@
     position: absolute;
     top: 0;
     right: -76px;
+    @include media-max-width(1850) {
+        width: 50px;
+    }
+    @include media-max-width(1000) {
+        display: none;
+    }
     img {
         display: block;
         height: auto;
@@ -61,6 +127,16 @@
     }
 }
 .info__description__button {
+    margin-top: 30px;
+    @include media-max-width(1850) {
+        margin-top: 20px;
+    }
+    @include media-max-width(1400) {
+        margin-top: 15px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 10px;
+    }
     button {
         background-color: transparent;
         font-family: var(--font-inter);
@@ -70,12 +146,19 @@
         cursor: pointer;
         padding: 0;
         outline: none;
-        margin-top: 30px;
         border: none;
         border-bottom: 1px solid var(--grey-1);
         transition:
             color 0.2s ease,
             border-color 0.2s ease;
+        @include media-max-width(1850) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @include media-max-width(1400) {
+            font-size: 16px;
+            line-height: 24px;
+        }
         @media (hover: hover) {
             &:hover {
                 color: var(--orange);

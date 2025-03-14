@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .header {
     background-color: var(--light-grey);
 }
@@ -6,6 +8,13 @@
     background-color: var(--dark-grey);
     padding: 6px 0;
     border-radius: 0 0 50px 50px;
+    @include media-max-width(1400) {
+        border-radius: 0 0 30px 30px;
+    }
+    @include media-max-width(1000) {
+        padding: 10px 0;
+        border-radius: 0 0 20px 20px;
+    }
     .container {
         display: flex;
         flex-direction: row;
@@ -20,6 +29,15 @@
     display: block;
     width: 251px;
     transition: opacity 0.2s ease;
+    @include media-max-width(1850) {
+        width: 220px;
+    }
+    @include media-max-width(1400) {
+        width: 200px;
+    }
+    @include media-max-width(1000) {
+        width: 40px;
+    }
     @media (hover: hover) {
         &:hover {
             opacity: 0.7;
@@ -29,16 +47,33 @@
         display: block;
         height: auto;
         width: 100%;
+        &:nth-child(1) {
+            @include media-max-width(1000) {
+                display: none;
+            }
+        }
+        &:nth-child(2) {
+            display: none;
+            @include media-max-width(1000) {
+                display: block;
+            }
+        }
     }
 }
 .header__nav {
     display: flex;
     flex-direction: row;
+    @include media-max-width(1280) {
+        display: none;
+    }
     a {
         color: var(--white);
         transition: color 0.2s ease;
         &:not(:last-child) {
             margin-right: 60px;
+            @include media-max-width(1850) {
+                margin-right: 40px;
+            }
         }
         @media (hover: hover) {
             &:hover {
@@ -59,6 +94,9 @@
     display: flex;
     flex-direction: row;
     margin-right: 12px;
+    @include media-max-width(1000) {
+        display: none;
+    }
     a {
         display: flex;
         height: 40px;
@@ -69,6 +107,10 @@
         overflow: hidden;
         transition: background-color 0.2s ease;
         position: relative;
+        @include media-max-width(1400) {
+            height: 35px;
+            width: 35px;
+        }
         &:not(:last-child) {
             margin-right: 12px;
         }
@@ -116,6 +158,9 @@
             width: 28px;
             position: relative;
             z-index: 1;
+            @include media-max-width(1400) {
+                width: 23px;
+            }
         }
     }
 }

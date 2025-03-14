@@ -1,5 +1,16 @@
+@use "@mixins" as *;
+
 .additional-services {
     margin-top: 110px;
+    @include media-max-width(1400) {
+        margin-top: 100px;
+    }
+    @include media-max-width(1280) {
+        margin-top: 80px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 60px;
+    }
 }
 .additional-services__title {
     text-align: center;
@@ -10,4 +21,20 @@
     gap: 20px;
     width: 1480px;
     margin: 40px auto 0 auto;
+    @include media-max-width(1850) {
+        width: 100%;
+        max-width: 1200px;
+        margin-top: 30px;
+    }
+    @include media-max-width(1400) {
+        margin-top: 25px;
+    }
+    @include media-max-width(1280) {
+        gap: 15px;
+    }
+    @include media-max-width(1000) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+    }
 }

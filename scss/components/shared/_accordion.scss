@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .accordion {
     &.active {
         .accordion__label {
@@ -27,6 +29,24 @@
     box-sizing: border-box;
     transition: border-color 0.2s ease;
     position: relative;
+    @include media-max-width(1850) {
+        font-size: 21px;
+        line-height: 28px;
+        padding: 30px 100px 30px 30px;
+        border-radius: 20px;
+    }
+    @include media-max-width(1400) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    @include media-max-width(1280) {
+        border-radius: 15px;
+    }
+    @include media-max-width(1000) {
+        font-size: 16px;
+        line-height: 21px;
+        padding: 15px 50px 15px 20px;
+    }
     &:after,
     &:before {
         background-color: var(--dark-grey);
@@ -45,11 +65,27 @@
         height: 46px;
         width: 3px;
         right: 66px;
+        @include media-max-width(1850) {
+            height: 30px;
+            right: 44px;
+        }
+        @include media-max-width(1000) {
+            height: 19px;
+            right: 23px;
+        }
     }
     &:after {
         height: 3px;
         width: 46px;
         right: 45px;
+        @include media-max-width(1850) {
+            width: 30px;
+            right: 30px;
+        }
+        @include media-max-width(1000) {
+            width: 19px;
+            right: 15px;
+        }
     }
     @media (hover: hover) {
         &:hover {
@@ -75,4 +111,16 @@
     padding: 40px;
     margin-top: 20px;
     border-radius: 30px;
+    @include media-max-width(1850) {
+        padding: 30px;
+        margin-top: 10px;
+        border-radius: 20px;
+    }
+    @include media-max-width(1280) {
+        border-radius: 15px;
+    }
+    @include media-max-width(1000) {
+        padding: 20px;
+        margin-top: 5px;
+    }
 }

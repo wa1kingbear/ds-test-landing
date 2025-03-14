@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .service-card {
     display: flex;
     background-color: var(--light-grey);
@@ -6,18 +8,50 @@
     border-radius: 40px;
     box-sizing: border-box;
     position: relative;
+    @include media-max-width(1850) {
+        padding: 30px;
+        border-radius: 20px;
+    }
+    @include media-max-width(1000) {
+        padding: 20px;
+        border-radius: 15px;
+    }
 }
 .service-card__content {
     max-width: 556px;
     font-family: var(--font-montserrat);
+    @include media-max-width(1850) {
+        max-width: 480px;
+    }
+    @include media-max-width(1400) {
+        max-width: 400px;
+    }
 }
 .service-card__title {
     font-weight: 600;
     font-size: 36px;
     line-height: 42px;
+    @include media-max-width(1850) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @include media-max-width(1400) {
+        font-size: 21px;
+        line-height: 28px;
+    }
+    @include media-max-width(1000) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 .service-card__price {
     margin-top: 20px;
+    @include media-max-width(1850) {
+        margin-top: 10px;
+    }
+    @include media-max-width(1400) {
+        margin-top: 7px;
+    }
     span {
         display: flex;
         flex-direction: row;
@@ -28,6 +62,15 @@
         font-size: 36px;
         line-height: 42px;
         margin-left: 12px;
+        @include media-max-width(1850) {
+            font-size: 28px;
+            line-height: 34px;
+            margin-left: 8px;
+        }
+        @include media-max-width(1400) {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 }
 .service-card__star {
@@ -36,6 +79,16 @@
     position: absolute;
     top: 40px;
     right: 40px;
+    @include media-max-width(1850) {
+        width: 40px;
+        top: 30px;
+        right: 30px;
+    }
+    @include media-max-width(1000) {
+        width: 30px;
+        top: 10px;
+        right: 10px;
+    }
     img {
         display: block;
         height: auto;
@@ -43,7 +96,11 @@
     }
 }
 .service-card__button {
-    margin-top: 30px;
+    padding-top: 30px;
+    margin-top: auto;
+    @include media-max-width(1850) {
+        padding-top: 25px;
+    }
     button,
     a {
         width: 100%;

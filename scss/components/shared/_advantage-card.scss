@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .advantage-card {
     min-height: 349px;
     background-color: var(--light-grey);
@@ -6,9 +8,35 @@
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    @include media-max-width(1850) {
+        min-height: 320px;
+        padding: 40px;
+        border-radius: 20px;
+    }
+    @include media-max-width(1400) {
+        min-height: 250px;
+        padding: 30px;
+    }
+    @include media-max-width(1280) {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    @include media-max-width(1000) {
+        min-height: 0;
+        border-radius: 15px;
+    }
 }
 .advantage-card__content {
     width: 466px;
+    @include media-max-width(1850) {
+        width: 70%;
+    }
+    @include media-max-width(1280) {
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+    }
 }
 .advantage-card__title {
     display: flex;
@@ -16,6 +44,22 @@
     line-height: 39px;
     flex-direction: row;
     align-items: flex-start;
+    @include media-max-width(1850) {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    @include media-max-width(1400) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @include media-max-width(1280) {
+        font-size: 21px;
+        line-height: 26px;
+    }
+    @include media-max-width(1000) {
+        font-size: 18px;
+        line-height: 24px;
+    }
     span {
         display: block;
     }
@@ -25,17 +69,53 @@
         width: 44px;
         margin-left: 30px;
         transform: rotate(12deg);
+        @include media-max-width(1850) {
+            width: 30px;
+            margin-top: 2px;
+            margin-left: 15px;
+        }
+        @include media-max-width(1400) {
+            margin-top: 0;
+        }
+        @include media-max-width(1280) {
+            width: 28px;
+        }
+        @include media-max-width(1000) {
+            width: 25px;
+        }
     }
 }
 .advantage-card__text {
     color: var(--grey-1);
     margin-top: 20px;
+    @include media-max-width(1850) {
+        margin-top: 15px;
+    }
+    @include media-max-width(1400) {
+        margin-top: 12px;
+    }
+    @include media-max-width(1280) {
+        margin-top: 10px;
+    }
 }
 .advantage-card__image {
     width: 364px;
     position: absolute;
     right: 0;
     bottom: 0;
+    @include media-max-width(1850) {
+        width: 260px;
+    }
+    @include media-max-width(1400) {
+        width: 200px;
+    }
+    @include media-max-width(1280) {
+        margin: auto 0 0 auto;
+        position: static;
+    }
+    @include media-max-width(1000) {
+        display: none;
+    }
     img {
         display: block;
         height: auto;

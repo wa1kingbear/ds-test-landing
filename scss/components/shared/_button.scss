@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .button {
     min-height: 72px;
     background-color: var(--button-bg);
@@ -16,6 +18,20 @@
     transition:
         background-color 0.2s ease,
         outline 0.2s ease;
+    @include media-max-width(1850) {
+        min-height: 60px;
+        font-size: 21px;
+        border-radius: 15px;
+    }
+    @include media-max-width(1400) {
+        min-height: 48px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+    @include media-max-width(1000) {
+        min-height: 42px;
+        font-size: 16px;
+    }
     @media (hover: hover) {
         &:hover {
             background-color: var(--button-bg-hover);

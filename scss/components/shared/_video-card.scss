@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .video-card {
     cursor: pointer;
     @media (hover: hover) {
@@ -16,6 +18,18 @@
     border-radius: 40px;
     overflow: hidden;
     position: relative;
+    @include media-max-width(1850) {
+        border-radius: 30px;
+    }
+    @include media-max-width(1400) {
+        border-radius: 20px;
+    }
+    @include media-max-width(1280) {
+        border-radius: 15px;
+    }
+    @include media-max-width(1000) {
+        border-radius: 10px;
+    }
 }
 .video-card__preview__image {
     display: flex;
@@ -55,6 +69,18 @@
     position: absolute;
     inset: 0;
     z-index: 1;
+    @include media-max-width(1850) {
+        height: 50px;
+        width: 50px;
+    }
+    @include media-max-width(1280) {
+        height: 45px;
+        width: 45px;
+    }
+    @include media-max-width(1000) {
+        height: 40px;
+        width: 40px;
+    }
     img {
         display: block;
         height: auto;

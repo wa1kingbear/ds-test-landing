@@ -1,32 +1,96 @@
+@use "@mixins" as *;
+
 .contacts {
     margin-top: 120px;
+    @include media-max-width(1400) {
+        margin-top: 100px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 80px;
+    }
     .container {
         display: flex;
         background-color: var(--light-grey);
         flex-direction: row;
         border-radius: 60px;
         overflow: hidden;
+        @include media-max-width(1850) {
+            border-radius: 30px;
+        }
+        @include media-max-width(1400) {
+            border-radius: 20px;
+        }
+        @include media-max-width(1000) {
+            border-radius: 15px;
+        }
     }
 }
 .contacts__content {
     padding: 80px 60px 80px 80px;
     flex: 1;
     box-sizing: border-box;
+    @include media-max-width(1850) {
+        padding: 60px;
+    }
+    @include media-max-width(1400) {
+        padding: 40px;
+    }
+    @include media-max-width(1280) {
+        padding: 30px;
+    }
+    @include media-max-width(1000) {
+        width: 100%;
+        flex: unset;
+        padding: 20px;
+    }
 }
 .contacts__title {
     text-align: center;
 }
 .contacts__description {
     margin-top: 20px;
+    @include media-max-width(1850) {
+        margin-top: 15px;
+    }
+    @include media-max-width(1400) {
+        margin-top: 10px;
+    }
 }
 .contacts__details {
     margin-top: 60px;
+    @include media-max-width(1850) {
+        margin-top: 40px;
+    }
+    @include media-max-width(1400) {
+        margin-top: 30px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 20px;
+    }
 }
 .contacts__details__item {
     font-size: 32px;
     line-height: 39px;
+    @include media-max-width(1850) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @include media-max-width(1400) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    @include media-max-width(1000) {
+        font-size: 16px;
+        line-height: 21px;
+    }
     &:not(:nth-child(1)) {
         margin-top: 30px;
+        @include media-max-width(1850) {
+            margin-top: 18px;
+        }
+        @include media-max-width(1400) {
+            margin-top: 15px;
+        }
     }
 }
 .contacts__details__item__title {
@@ -34,6 +98,12 @@
 }
 .contacts__details__item__text {
     margin-top: 12px;
+    @include media-max-width(1850) {
+        margin-top: 5px;
+    }
+    @include media-max-width(1000) {
+        margin-top: 2px;
+    }
     a {
         text-decoration: none;
         color: var(--dark-grey);
@@ -48,21 +118,6 @@
         }
     }
 }
-.contacts__image {
-    display: flex;
-    min-height: 100%;
-    width: 880px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 60px;
-    overflow: hidden;
-    img {
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-}
 .contacts__messanger {
     display: flex;
     width: 565px;
@@ -73,11 +128,31 @@
     align-items: center;
     flex-direction: row;
     margin-top: 30px;
+    @include media-max-width(1850) {
+        width: 390px;
+        font-size: 21px;
+        line-height: 30px;
+    }
+    @include media-max-width(1400) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 20px;
+    }
+    @include media-max-width(1000) {
+        width: 100%;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        flex-direction: column;
+    }
 }
 .contacts__messanger__text {
     flex: 1;
 }
 .contacts__messanger__icon {
+    @include media-max-width(1000) {
+        margin-top: 12px;
+    }
     a {
         display: flex;
         height: 64px;
@@ -89,6 +164,20 @@
         overflow: hidden;
         transition: background-color 0.2s ease;
         position: relative;
+        @include media-max-width(1850) {
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+        }
+        @include media-max-width(1400) {
+            height: 45px;
+            width: 45px;
+            border-radius: 7px;
+        }
+        @include media-max-width(1000) {
+            height: 40px;
+            width: 40px;
+        }
         @media (hover: hover) {
             &:hover {
                 background-color: var(--telegram-btn-hover);
@@ -103,6 +192,40 @@
             width: 45px;
             position: relative;
             z-index: 1;
+            @include media-max-width(1850) {
+                width: 30px;
+            }
+            @include media-max-width(1400) {
+                width: 25px;
+            }
         }
+    }
+}
+.contacts__image {
+    display: flex;
+    min-height: 100%;
+    width: 880px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    overflow: hidden;
+    @include media-max-width(1850) {
+        width: 45%;
+        border-radius: 30px;
+    }
+    @include media-max-width(1400) {
+        border-radius: 20px;
+    }
+    @include media-max-width(1280) {
+        width: 40%;
+    }
+    @include media-max-width(1000) {
+        display: none;
+    }
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }

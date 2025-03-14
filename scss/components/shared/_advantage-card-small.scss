@@ -1,18 +1,35 @@
+@use "@mixins" as *;
+
 .advantage-card-small {
     background-color: var(--light-grey);
     color: var(--grey-1);
     padding: 30px;
     border-radius: 40px;
     box-sizing: border-box;
+    @include media-max-width(1850) {
+        border-radius: 20px;
+    }
+    @include media-max-width(1400) {
+        padding: 20px;
+    }
+    @include media-max-width(1280) {
+        border-radius: 15px;
+    }
 }
 .advantage-card-small__icon {
     img {
         display: block;
         height: auto;
         width: 50px;
+        @include media-max-width(1850) {
+            width: 35px;
+        }
     }
 }
 .advantage-card-small__title {
     font-weight: 600;
     margin-top: 20px;
+    @include media-max-width(1850) {
+        margin-top: 15px;
+    }
 }

@@ -1,3 +1,5 @@
+@use "@mixins" as *;
+
 .client-card {
     display: flex;
     height: 200px;
@@ -7,6 +9,20 @@
     padding: 20px 30px;
     border-radius: 30px;
     box-sizing: border-box;
+    @include media-max-width(1850) {
+        height: 180px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    @include media-max-width(1400) {
+        height: 150px;
+        padding: 20px 30px;
+    }
+    @include media-max-width(1280) {
+        height: 100px;
+        padding: 10px 15px;
+        border-radius: 15px;
+    }
     img {
         display: block;
         height: auto;

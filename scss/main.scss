@@ -62,6 +62,14 @@ body {
     color: var(--dark-grey);
     flex: 1;
     text-rendering: optimizeLegibility;
+    @include media-max-width(1850) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    @include media-max-width(1400) {
+        font-size: 16px;
+        line-height: 21px;
+    }
     &.lock {
         overflow: hidden;
     }
