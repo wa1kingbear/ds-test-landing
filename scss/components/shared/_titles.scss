@@ -1,0 +1,19 @@
+.h1,
+.h2 {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    .orange {
+        color: var(--orange);
+    }
+    &.white {
+        color: var(--white);
+    }
+}
+.h1 {
+    font-size: 80px;
+    line-height: 80px;
+}
+.h2 {
+    font-size: 48px;
+    line-height: 52px;
+}

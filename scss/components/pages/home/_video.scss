@@ -1,0 +1,23 @@
+.video {
+    margin-top: 120px;
+}
+.video__title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    h2 {
+        position: relative;
+        img {
+            display: block;
+            height: auto;
+            width: 72px;
+            position: absolute;
+            right: -92px;
+            bottom: -3px;
+        }
+    }
+}
+.video__preview {
+    width: 1180px;
+    margin: 40px auto 0 auto;
+}

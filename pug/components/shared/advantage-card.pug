@@ -1,9 +1,10 @@
 mixin advantage-card(label, text, image)
     article.advantage-card
-        .advantage-card__title
-            span= label
-            img(src="assets/icons/star.svg", alt="star")
-        .advantage-card__text 
-            p= text
+        .advantage-card__content
+            .advantage-card__title
+                span!= label
+                img(src="assets/icons/star.svg", alt="star")
+            .advantage-card__text 
+                p= text
         .advantage-card__image
             img(src= image, alt= label)

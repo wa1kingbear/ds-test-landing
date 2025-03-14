@@ -21,7 +21,7 @@
         "not IE 11"
     ],
     "dependencies": {
-        "swiper": "^11.2.4"
+        "swiper": "^11.2.5"
     },
     "type": "module"
 }

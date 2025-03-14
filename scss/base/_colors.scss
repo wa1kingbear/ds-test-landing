@@ -1,8 +1,18 @@
 :root {
     --white: #ffffff;
+    --grey-1: #808080;
     --grey-2: #c0c0c0;
     --dark-grey: #2d2d2d;
+    --light-grey: #f6f6f6;
     --light-blue: #37aee2;
+
+    --orange: #ff6600;
+
+    --button-bg: #ff6600;
+    --button-bg-hover: #ff9832;
+    --button-bg-active: #cd3400;
+    --button-bg-disabled: #c0c0c0;
+    --button-focus: rgba(255, 102, 0, 0.5);
 
     --telegram-btn: #37aee2;
     --telegram-btn-hover: #1c81f5;
@@ -11,4 +21,9 @@
     --whatsapp-btn: #43d62c;
     --whatsapp-btn-hover: #2ace1b;
     --whatsapp-btn-active: #189f0e;
+
+    --bullet-rest: #dbdbdb;
+    --bullet-active: #ff6600;
+    --bullet-hover: #c0c0c0;
+    --bullet-disabled: #808080;
 }

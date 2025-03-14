@@ -1,0 +1,51 @@
+.service-card {
+    display: flex;
+    background-color: var(--light-grey);
+    padding: 40px;
+    flex-direction: column;
+    border-radius: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.service-card__content {
+    max-width: 556px;
+    font-family: var(--font-montserrat);
+}
+.service-card__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+}
+.service-card__price {
+    margin-top: 20px;
+    span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    i {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 42px;
+        margin-left: 12px;
+    }
+}
+.service-card__star {
+    width: 48px;
+    transform: rotate(-12deg);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+.service-card__button {
+    margin-top: 30px;
+    button,
+    a {
+        width: 100%;
+    }
+}

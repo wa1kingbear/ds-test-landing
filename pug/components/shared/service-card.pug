@@ -1,12 +1,13 @@
 mixin service-card(title, price)
     article.service-card
-        .service-card__title
-            span= title
-        .service-card__price 
-            span за
-                | #{' '}
-                i= price 
-                    | #{' '}₽
+        .service-card__content
+            .service-card__title
+                span!= title
+            .service-card__price 
+                span за
+                    | #{' '}
+                    i.text-gradient= price 
+                        | #{' '}₽
         .service-card__button
             +button('Купить')
         .service-card__star

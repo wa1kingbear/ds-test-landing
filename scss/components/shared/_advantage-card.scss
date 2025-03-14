@@ -1,0 +1,44 @@
+.advantage-card {
+    min-height: 349px;
+    background-color: var(--light-grey);
+    padding: 60px 40px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.advantage-card__content {
+    width: 466px;
+}
+.advantage-card__title {
+    display: flex;
+    font-size: 32px;
+    line-height: 39px;
+    flex-direction: row;
+    align-items: flex-start;
+    span {
+        display: block;
+    }
+    img {
+        display: block;
+        height: auto;
+        width: 44px;
+        margin-left: 30px;
+        transform: rotate(12deg);
+    }
+}
+.advantage-card__text {
+    color: var(--grey-1);
+    margin-top: 20px;
+}
+.advantage-card__image {
+    width: 364px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}

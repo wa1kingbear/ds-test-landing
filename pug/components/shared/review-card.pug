@@ -1,7 +1,13 @@
+- var n = 5
 mixin review-card(rating, text, niche)
-    .review-card__rating
-        span= rating
-    .review-card__text
-        p= text
-    .review-card__niche
-        span Ниша: #{niche}
+    .review-card
+        .review-card__rating
+            .review-card__rating__text
+                span= rating
+            .review-card__rating__stars
+                each _ in Array(n)
+                    img(src="/assets/icons/star.svg", alt="star")
+        .review-card__text
+            p= text
+        .review-card__niche
+            span Ниша: #{niche}

@@ -1,7 +1,8 @@
-mixin video-card(title, video, preview)
-    .video-card(data-src= video)
+mixin video-card(title, video, preview, size)
+    .video-card(data-src= video, class= size)
         .video-card__preview
-            img(src= preview, alt= title)
+            .video-card__preview__image
+                img(src= preview, alt= title)
             .video-card__icon
                 img(src="assets/icons/play.svg", alt="")
         if title && title.trim() !== ''

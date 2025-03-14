@@ -1,0 +1,13 @@
+.additional-services {
+    margin-top: 110px;
+}
+.additional-services__title {
+    text-align: center;
+}
+.additional-services__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 1480px;
+    margin: 40px auto 0 auto;
+}

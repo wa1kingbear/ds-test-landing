@@ -1,0 +1,11 @@
+.description {
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    color: var(--grey-1);
+}
+.prices__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

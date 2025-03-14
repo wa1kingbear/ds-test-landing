@@ -5,6 +5,36 @@
 @use "./variables";
 
 @use "./components/shared/button";
+@use "./components/shared/titles";
+@use "./components/shared/advantage-card";
+@use "./components/shared/price-card";
+@use "./components/shared/service-card";
+@use "./components/shared/client-card";
+@use "./components/shared/review-card";
+@use "./components/shared/video-card";
+@use "./components/shared/promo-dark";
+@use "./components/shared/step-slide";
+@use "./components/shared/advantage-card-medium";
+@use "./components/shared/advantage-card-small";
+@use "./components/shared/description";
+@use "./components/shared/text-gradient";
+@use "./components/shared/accordion";
+
+@use "./components/pages/home/heading";
+@use "./components/pages/home/advantages";
+@use "./components/pages/home/prices";
+@use "./components/pages/home/additional-services";
+@use "./components/pages/home/clients";
+@use "./components/pages/home/reviews";
+@use "./components/pages/home/promo-simple";
+@use "./components/pages/home/promo-registration";
+@use "./components/pages/home/steps";
+@use "./components/pages/home/video";
+@use "./components/pages/home/why";
+@use "./components/pages/home/promo-result";
+@use "./components/pages/home/faq";
+@use "./components/pages/home/info";
+@use "./components/pages/home/contacts";
 
 @use "./layout/header";
 @use "./layout/footer";

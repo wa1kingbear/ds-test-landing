@@ -1,14 +1,16 @@
 mixin promo-dark(title, image, position)
-    .container(class=position ? position : '')
-        .promo-dark__content
-            .promo-dark__title.h2.white
-                h2= title
-            .promo-dark__button
-                +button('Зарегистрироваться')
-        .promo-dark__image
-            .promo-dark__image__content
-                img(src= image, alt="promo")
-            .promo-dark__star
-                img(src="assets/icons/star.svg", alt="star")
-            .promo-dark__star
-                img(src="assets/icons/star.svg", alt="star")
+    .promo-dark(class=position ? position : '')
+        .container
+            .promo-dark__content
+                .promo-dark__title.h2.white
+                    h2= title
+                .promo-dark__button
+                    +button('Зарегистрироваться')
+            .promo-dark__image
+                .promo-dark__image__content
+                    img(src= image, alt="promo")
+                .promo-dark__star.star-1
+                    img(src="assets/icons/star.svg", alt="star")
+                if position === 'left'
+                    .promo-dark__star.star-2
+                        img(src="assets/icons/star.svg", alt="star")

@@ -3,14 +3,14 @@ mixin price-card(tag, title, price, text, items, theme)
         .price-card__tag
             span= tag
             if theme === 'dark'
-                img(src="assets/icons/star-black.svg", alt="star")
-            else 
                 img(src="assets/icons/star-white.svg", alt="star")
+            else 
+                img(src="assets/icons/star-black.svg", alt="star")
         .price-card__title 
             span= title
                 <br />
                 | за 
-                i= price
+                i.text-gradient= price
                     | #{' '}₽
         .price-card__text 
             p= text 

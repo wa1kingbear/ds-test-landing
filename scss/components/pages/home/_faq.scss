@@ -1,0 +1,28 @@
+.faq {
+    margin-top: 120px;
+}
+.faq__title {
+    text-align: center;
+}
+.faq__content {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    margin-top: 40px;
+}
+.faq__list {
+    flex: 1;
+    .accordion {
+        &:not(:nth-child(1)) {
+            margin-top: 25px;
+        }
+    }
+}
+.faq__image {
+    width: 879px;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}

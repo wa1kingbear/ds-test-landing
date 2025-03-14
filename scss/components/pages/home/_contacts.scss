@@ -1,0 +1,108 @@
+.contacts {
+    margin-top: 120px;
+    .container {
+        display: flex;
+        background-color: var(--light-grey);
+        flex-direction: row;
+        border-radius: 60px;
+        overflow: hidden;
+    }
+}
+.contacts__content {
+    padding: 80px 60px 80px 80px;
+    flex: 1;
+    box-sizing: border-box;
+}
+.contacts__title {
+    text-align: center;
+}
+.contacts__description {
+    margin-top: 20px;
+}
+.contacts__details {
+    margin-top: 60px;
+}
+.contacts__details__item {
+    font-size: 32px;
+    line-height: 39px;
+    &:not(:nth-child(1)) {
+        margin-top: 30px;
+    }
+}
+.contacts__details__item__title {
+    color: var(--grey-1);
+}
+.contacts__details__item__text {
+    margin-top: 12px;
+    a {
+        text-decoration: none;
+        color: var(--dark-grey);
+        transition: color 0.2s ease;
+        @media (hover: hover) {
+            &:hover {
+                color: var(--grey-1);
+            }
+        }
+        &:active {
+            color: var(--orange);
+        }
+    }
+}
+.contacts__image {
+    display: flex;
+    min-height: 100%;
+    width: 880px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    overflow: hidden;
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.contacts__messanger {
+    display: flex;
+    width: 565px;
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--grey-1);
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.contacts__messanger__text {
+    flex: 1;
+}
+.contacts__messanger__icon {
+    a {
+        display: flex;
+        height: 64px;
+        width: 64px;
+        background-color: var(--telegram-btn);
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: background-color 0.2s ease;
+        position: relative;
+        @media (hover: hover) {
+            &:hover {
+                background-color: var(--telegram-btn-hover);
+            }
+        }
+        &:active {
+            background-color: var(--telegram-btn-active);
+        }
+        svg {
+            display: block;
+            height: auto;
+            width: 45px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

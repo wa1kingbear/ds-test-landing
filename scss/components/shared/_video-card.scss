@@ -1,0 +1,66 @@
+.video-card {
+    cursor: pointer;
+    @media (hover: hover) {
+        &:hover {
+            .video-card__preview__image {
+                img {
+                    filter: none;
+                }
+            }
+        }
+    }
+}
+.video-card__preview {
+    background-color: var(--dark-grey);
+    aspect-ratio: 580 / 320;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+}
+.video-card__preview__image {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    &:before {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: var(--dark-grey);
+        content: "";
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: blur(5px);
+        transition: filter 0.2s ease;
+    }
+}
+.video-card__icon {
+    height: 70px;
+    width: 70px;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+.video-card__title {
+    margin-top: 12px;
+}

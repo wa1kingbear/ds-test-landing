@@ -1,0 +1,28 @@
+.advantage-card-medium {
+    background-color: var(--light-grey);
+    padding: 40px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.advantage-card-medium__title {
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 80px;
+}
+.advantage-card-medium__star {
+    width: 60px;
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+}
+.advantage-card-medium__text {
+    margin-top: 12px;
+}

@@ -1,4 +1,8 @@
 .header {
+    background-color: var(--light-grey);
+}
+.header__content {
+    width: 100%;
     background-color: var(--dark-grey);
     padding: 6px 0;
     border-radius: 0 0 50px 50px;
@@ -40,6 +44,9 @@
             &:hover {
                 color: var(--grey-2);
             }
+        }
+        &:active {
+            color: var(--orange);
         }
     }
 }
@@ -120,6 +127,9 @@
             &:hover {
                 color: var(--grey-2);
             }
+        }
+        &:active {
+            color: var(--orange);
         }
     }
 }

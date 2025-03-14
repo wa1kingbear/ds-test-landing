@@ -3,11 +3,11 @@ mixin step-slide(title, name, image)
         .step-slide__title.h2
             h2= title
         .step-slide__content
-            .step-slide__title
-                .step-slide__title__num
+            .step-slide__content__title
+                .step-slide__content__title__num
                     span
                     img(src= image, alt="check")
-                .step-slide__title__text.h2
+                .step-slide__content__title__text.h2
                     h3= name
-            .step-slide__text
+            .step-slide__content__text
                 block
